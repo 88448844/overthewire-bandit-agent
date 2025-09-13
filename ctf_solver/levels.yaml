@@ -1,0 +1,244 @@
+research:
+  enable: true
+  max_calls_per_level: 2
+  avoid_spoilers: true
+
+levels:
+  - level: 0
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit0
+    password: bandit0
+    goal: "Read and capture the password for bandit1 from /home/bandit0/readme"
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 1
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit1
+    password_from_prev: true
+    goal: "The password for the next level is stored in a file called - located in the home directory."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 2
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit2
+    password_from_prev: true
+    goal: "The password for the next level is stored in a file called 'spaces in this filename' in the home directory."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 3
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit3
+    password_from_prev: true
+    goal: "The password for the next level is stored in a hidden file in the 'inhere' directory."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 4
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit4
+    password_from_prev: true
+    goal: "The password for the next level is stored in the only human-readable file in the 'inhere' directory."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 5
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit5
+    password_from_prev: true
+    goal: "The password for the next level is stored in a file somewhere in the 'inhere' directory and has the following properties: human-readable, 1033 bytes in size, not executable"
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 6
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit6
+    password_from_prev: true
+    goal: "The password for the next level is stored somewhere on the server and has the following properties: owned by user bandit7, owned by group bandit6, 33 bytes in size."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 7
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit7
+    password_from_prev: true
+    goal: "The password for the next level is stored in the file data.txt next to the word 'millionth'."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 8
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit8
+    password_from_prev: true
+    goal: "The password for the next level is stored in the file data.txt and is the only line of text that occurs only once."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 9
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit9
+    password_from_prev: true
+    goal: "The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several '=' characters."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 10
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit10
+    password_from_prev: true
+    goal: "The password for the next level is stored in the file data.txt, which contains base64 encoded data."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 11
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit11
+    password_from_prev: true
+    goal: "The password for the next level is stored in the file data.txt, where the data has been encrypted with a simple rotational cipher (ROT13)."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 12
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit12
+    password_from_prev: true
+    goal: "The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. Decompress the file to find the password."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 13
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit13
+    password_from_prev: true
+    goal: "The password for the next level is stored in /etc/bandit_pass/bandit14, but you need to use the private SSH key found in sshkey.private to log in as bandit14."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 14
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit14
+    password_from_prev: true
+    goal: "The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 15
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit15
+    password_from_prev: true
+    goal: "The password for the next level can be retrieved by submitting the password of the current level to a SSL-encrypted port between 31000 and 32000 on localhost."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 16
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit16
+    password_from_prev: true
+    goal: "The password for the next level can be retrieved by submitting the password of the current level to a SSL-encrypted port that is also a nmap scan result."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 17
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit17
+    password_from_prev: true
+    goal: "The password for the next level is in the file 'passwords.new' and is the only line that is not in 'passwords.old'."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 18
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit18
+    password_from_prev: true
+    goal: "The password for the next level is in the readme file in the home directory. You will be logged out when you log in with SSH, so you need to execute a command before you are logged out."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 19
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit19
+    password_from_prev: true
+    goal: "The password for the next level is in a file that can be read by executing the setuid binary in the home directory."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 20
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit20
+    password_from_prev: true
+    goal: "The password for the next level is in a file that can be read by executing the suconnect binary in the home directory, which will connect to a port you specify on localhost."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 21
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit21
+    password_from_prev: true
+    goal: "The password for the next level is in a file in /etc/cron.d/ that is readable by you. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 22
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit22
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 23
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit23
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 24
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit24
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 25
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit25
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 26
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit26
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 27
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit27
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 28
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit28
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 29
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit29
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 30
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit30
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 31
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit31
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 32
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit32
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"
+  - level: 33
+    host: bandit.labs.overthewire.org
+    port: 2220
+    user: bandit33
+    password_from_prev: true
+    goal: "The password for the next level is in a file that is read by a cron job. The cron job executes a script that reads a password from a file."
+    flag_regex: "[a-zA-Z0-9]{32}"

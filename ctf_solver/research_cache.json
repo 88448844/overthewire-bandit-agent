@@ -1,0 +1,10 @@
+{
+    "level_1": {
+        "goal": "The password is in a file named '-' (a single hyphen).",
+        "commands": [
+            "ls -la",
+            "cat ./-"
+        ],
+        "notes": "The filename '-' is special and requires `./` to be accessed."
+    }
+}

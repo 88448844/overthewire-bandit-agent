@@ -1,0 +1,16 @@
+You are assisting with OverTheWire Bandit level {level}. 
+Summarize ONLY the CURRENT level’s task without spoilers for later levels. 
+From the search results and page excerpt below, output a compact JSON with keys:
+
+- goal: one sentence describing what to find/do for this level.
+- commands: a LIST of at most 3 SAFE Linux commands from this allow-list:
+  [ls, cd, cat, file, strings, find, grep, head, tail, wc, stat, xxd, du, pwd, echo]
+  Tailor to $PWD = {pwd}. Prefer the simplest steps.
+- notes: (optional) one short line for pitfalls (e.g., filename begins with '-'; use `cat ./-`).
+
+Rules:
+- Do NOT include flags/passwords or instructions for other levels.
+- Do NOT include commands outside the allow-list.
+- Prefer `cat ./-` for files named '-'.
+
+Return ONLY valid JSON.
