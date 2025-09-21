@@ -1,3 +1,7 @@
+![Alt text](/overthewire.png)
+
+
+
 # Autonomous CTF Solver
 
 This project is an autonomous agent that solves Capture The Flag (CTF) challenges, specifically tailored for the OverTheWire Bandit wargame.
